@@ -1,0 +1,60 @@
+body {
+padding: 0px 0px 0px 0px;
+margin: 0px 0px 0px 0px;
+}
+form {
+padding: 0px 0px 0px 0px;
+margin: 0px 0px 0px 0px;
+}
+div, td, th, tr, table, a, body, select, input, textarea {
+font-family: "MS Sans Serif", Arial, sans-serif;
+font-size: 8pt;
+}
+a:link, a:active, a:visited {
+color: #000000;
+}
+a:hover {
+color: #666666;
+}
+th {
+background-color: #9DBD9D;
+font-weight: bold;
+color: #000000;
+}
+.xout {
+border-color: #000000;
+border-style: solid;
+border-width: 1px 1px 1px 1px;
+border-spacing: 0;
+border-collapse: collapse;
+}
+.xinth {
+border-color: #000000;
+border-style: solid;
+margin: 0;
+padding: 4px 4px 4px 4px;
+border-width: 0 0 1px 0;
+}
+.xin,.xinalt,.xinaltsel {
+border-color: #000000;
+border-style: solid;
+margin: 0;
+padding: 4px 4px 4px 4px;
+border-width: 1px 1px 1px 1px;
+}
+.xinalt {
+background-color: #dedede;
+}
+.xinaltsel {
+background-color: #c8dbc8;
+}
+.leftcol {
+background-color: #eeeeee;
+}
+.rightcol {
+background-color: #9DBD9D;
+}
+.botrow {
+background-color: #999999;
+}
+.sl {position:absolute; overflow:auto; top:30px; bottom:30px; width:250px; right: 0px;}

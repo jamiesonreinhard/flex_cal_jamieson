@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>Calendar</title>
+<link type="text/css" rel="stylesheet" href="calendar.css">
+<script type="text/javascript" language="javascript" src="calendar.js"></script>
+</head>
+<body onLoad="init();">
+<table border=0 cellpadding=3 cellspacing=0 width="100%" height="100%">
+  <tr>
+    <td valign="top" class="leftcol" id="lc">
+    <script language="Javascript">
+    w(calendar(null));
+    </script>
+    </td>
+    <td valign="top" class="rightcol" width=250>
+	    <form name="xform">
+	    <table cellpadding=3 cellspacing=0 border=0 width="100%">
+	      <tr>
+	        <td>
+	          <input type="button" value="Up" style="width:40px" onClick="divw(calendar('u'),'lc');">
+	          <input type="button" value="Down" style="width:40px" onClick="divw(calendar('d'),'lc');">
+	        </td>
+	        <td align="right">
+	        <div id="dtselected"></div>
+	        </td>
+	      </tr>
+	    </table>
+	    <div class="sl">
+	    <script language="Javascript">
+	    w(dputs());
+	    </script>
+	    </div>
+	    </form>
+    </td>
+  </tr>
+  <tr>
+    <td class="botrow" height=1>
+    <form name="rowform" onSubmit="return false;">
+    Number of Rows: <input type="text" name="rowsize" size=1 maxlength=2 value=6 onChange="numrows=this.value;divw(calendar('rf'),'lc');">
+    </form>
+    </td>
+    <td class="botrow" align="right">
+    design and programming by dki
+    </td>
+  </tr>
+</table>
+</body>
+</html>
