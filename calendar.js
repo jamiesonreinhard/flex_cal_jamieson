@@ -3,10 +3,18 @@ inputdata = new Array();
 selecteddate = "";
 numrows = 6;
 datex = new Date();
+console.log(datex);
 day = datex.getDate();
 month = datex.getMonth();
 year = datex.getFullYear();
+daysinmonth = daysInMonth(year, month);
 months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
+
+function daysInMonth (month, year) {
+  return new Date(year, month + 1, 0).getDate();
+}
+
+console.log(daysinmonth);
 
 function datatype(key) {
     this.key = key;
@@ -18,6 +26,11 @@ function calendar(dir) {
         var this_month = new Date(year, month, 1);
         var first_week_day = this_month.getDay();
         startdate = new Date(this_month - (first_week_day * 86400000));
+        weekdayvalue = startdate.getDay();
+        numrows = (weekdayvalue + daysinmonth - 1) / 7;
+        if ((weekdayvalue + daysinmonth - 1) % 7 != 0) {
+          numrows ++;
+        }
     } else if (dir == "u") {
         startdate.setMilliseconds(startdate.getMilliseconds() - (7 * 86400000));
     } else if (dir == "d") {
