@@ -116,6 +116,7 @@ function savedata(xtext, xinput) {
 
 function dputs() {
     var inputs_html = "";
+    inputs_html += '<tr><td align="right" valign="top" nowrap><b>' + "All Day" + '</b> </td><td><textarea name="entry' + "0" + '" rows="4" cols="29" onChange="savedata(this.value,this.name);"></textarea></td></tr>';
     for (var x = 7; x <= 19; x++) {
         var z = (x <= 12 ? x : (x - 12)) + ":00 " + (x < 12 ? "am" : (x != 24 ? "pm" : "am"));
         inputs_html += '<tr><td align="right" valign="top" nowrap><b>' + z + '</b> </td><td><textarea name="entry' + x + '" rows="4" cols="29" onChange="savedata(this.value,this.name);"></textarea></td></tr>';
