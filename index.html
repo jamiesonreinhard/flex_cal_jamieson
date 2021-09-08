@@ -12,8 +12,8 @@
     <img src="assets/close.svg" alt="closeIcon" class="closeIcon">
     <h1>Settings</h1>
     <div>
-      Number of Weeks Shown: &nbsp;<input type="range" name="rowsize" size=1 min=2 max=6 value=6 onChange="numrows=this.value;divw(calendar('rf'),'lc');updateWeeksShown()">
-      &nbsp;<h2 class="weeksShown">6</h2>
+      Number of Weeks Shown: &nbsp;<input id="weeksShown" type="range" name="rowsize" size=1 min=2 max=6 value=5 onChange="numrows=this.value;divw(calendar('rf'),'lc');updateWeeksShown()">
+      &nbsp;<h2 class="weeksShown"></h2>
     </div>
     <div>
       Change Color Theme: &nbsp;

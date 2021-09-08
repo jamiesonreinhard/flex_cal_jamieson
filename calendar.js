@@ -3,7 +3,6 @@ inputdata = new Array();
 selecteddate = "";
 numrows = 6;
 datex = new Date();
-console.log(datex);
 day = datex.getDate();
 month = datex.getMonth();
 year = datex.getFullYear();
@@ -13,8 +12,6 @@ months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July
 function daysInMonth (month, year) {
   return new Date(year, month + 1, 0).getDate();
 }
-
-console.log(daysinmonth);
 
 function datatype(key) {
     this.key = key;
@@ -31,6 +28,8 @@ function calendar(dir) {
         if ((weekdayvalue + daysinmonth - 1) % 7 != 0) {
           numrows ++;
         }
+        document.querySelector(".weeksShown").innerHTML = Math.round(numrows);
+        document.querySelector("#weeksShown").val = Math.round(numrows);
     } else if (dir == "u") {
         startdate.setMilliseconds(startdate.getMilliseconds() - (7 * 86400000));
     } else if (dir == "d") {
@@ -129,10 +128,13 @@ function savedata(xtext, xinput) {
 
 function dputs() {
     var inputs_html = "";
-    inputs_html += '<tr><td align="right" valign="top" nowrap><b>' + "All Day" + '</b> </td><td><textarea name="entry' + "0" + '" rows="4" cols="29" onChange="savedata(this.value,this.name);"></textarea></td></tr>';
-    for (var x = 7; x <= 19; x++) {
-        var z = (x <= 12 ? x : (x - 12)) + ":00 " + (x < 12 ? "am" : (x != 24 ? "pm" : "am"));
-        inputs_html += '<tr><td align="right" valign="top" nowrap><b>' + z + '</b> </td><td><textarea name="entry' + x + '" rows="4" cols="29" onChange="savedata(this.value,this.name);"></textarea></td></tr>';
+    for (var x = 6; x <= 19; x++) {
+        if (x == 6){
+          inputs_html += '<tr><td align="right" valign="top" nowrap><b>All Day</b> </td><td><textarea name="entry" rows="4" cols="29" onChange="savedata(this.value,this.name);"></textarea></td></tr>';
+        } else {
+          var z = (x <= 12 ? x : (x - 12)) + ":00 " + (x < 12 ? "am" : (x != 24 ? "pm" : "am"));
+          inputs_html += '<tr><td align="right" valign="top" nowrap><b>' + z + '</b> </td><td><textarea name="entry' + x + '" rows="4" cols="29" onChange="savedata(this.value,this.name);"></textarea></td></tr>';
+        }
     }
     return "<table cellpadding=1 cellspacing=0 border=0>" + inputs_html + "</table>";
 }
