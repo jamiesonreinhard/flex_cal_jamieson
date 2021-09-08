@@ -2,6 +2,9 @@ body {
 padding: 0px 0px 0px 0px;
 margin: 0px 0px 0px 0px;
 }
+table {
+  position: relative;
+}
 form {
 padding: 0px 0px 0px 0px;
 margin: 0px 0px 0px 0px;
@@ -54,7 +57,63 @@ background-color: #eeeeee;
 .rightcol {
 background-color: #9DBD9D;
 }
+.controls {
+  display: flex;
+  align-items: center;
+}
+.controls input {
+  cursor: pointer;
+}
+.controls input:not(:last-child) {
+  margin-right: 5px;
+}
+.gearIcon {
+  margin-left: 5px;
+  cursor: pointer;
+  transition: 0.1s all;
+}
+.gearIcon:hover{
+  transform: translateY(-1px);
+}
 .botrow {
 background-color: #999999;
 }
-.sl {position:absolute; overflow:auto; top:30px; bottom:30px; width:250px; right: 0px;}
+.sl {
+  position:absolute;
+  overflow:auto;
+  top:30px;
+  bottom:30px;
+  width:250px;
+  right: 0px;
+  margin-top: 8px;
+}
+.settingsModal {
+  position: absolute;
+  background-color: #FFF;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 400px;
+  height: 300px;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  box-shadow: 2px 2px 20px #666666;
+  display: none;
+}
+.settingsModal h3 {
+  margin-bottom: 10px;
+}
+.settingsModal div {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+.closeIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
