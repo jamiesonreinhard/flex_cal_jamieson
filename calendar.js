@@ -136,6 +136,11 @@ function divw(text, id) {
     }
 }
 
+function updateWeeksShown(){
+  const weeksShown = document.querySelector(".weeksShown");
+  weeksShown.innerHTML = numrows;
+}
+
 function w(m) {
     if ("undefined" != m.toString()) {
         document.writeln(m.toString());
