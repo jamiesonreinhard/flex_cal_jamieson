@@ -57,15 +57,11 @@ background-color: #eeeeee;
 .rightcol {
 background-color: #9DBD9D;
 }
-.controls {
+.rightColHeader {
   display: flex;
   align-items: center;
-}
-.controls input {
-  cursor: pointer;
-}
-.controls input:not(:last-child) {
-  margin-right: 5px;
+  margin-bottom: 5px;
+  justify-content: space-between;
 }
 .gearIcon {
   margin-left: 5px;
@@ -81,11 +77,10 @@ background-color: #999999;
 .sl {
   position:absolute;
   overflow:auto;
-  top:30px;
+  top:100px;
   bottom:30px;
   width:250px;
   right: 0px;
-  margin-top: 8px;
 }
 .settingsModal {
   position: absolute;
@@ -118,5 +113,11 @@ background-color: #999999;
   position: absolute;
   top: 10px;
   right: 10px;
+  cursor: pointer;
+}
+.navButtons {
+  text-align: center;
+}
+.navButtons input{
   cursor: pointer;
 }

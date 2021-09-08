@@ -22,6 +22,10 @@ function calendar(dir) {
         startdate.setMilliseconds(startdate.getMilliseconds() - (7 * 86400000));
     } else if (dir == "d") {
         startdate.setMilliseconds(startdate.getMilliseconds() + (7 * 86400000));
+    } else if (dir == "lm") {
+        startdate.setMilliseconds(startdate.getMilliseconds() - (30.5 * 86400000));
+    } else if (dir == "nm") {
+        startdate.setMilliseconds(startdate.getMilliseconds() + (30.5 * 86400000));
     }
     var begdate = new Date(startdate);
     var calendar_html = '<table width="100%" height="100%" align="center" cellpadding=0 cellspacing=0 class="xout">';

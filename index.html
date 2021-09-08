@@ -30,15 +30,20 @@
 	    <form name="xform">
 	    <table cellpadding=3 cellspacing=0 border=0 width="100%">
 	      <tr>
-	        <td class="controls">
-	          <input type="button" value="Up" style="width:40px" onClick="divw(calendar('u'),'lc');">
-	          <input type="button" value="Down" style="width:40px" onClick="divw(calendar('d'),'lc');">
+	        <td class="rightColHeader">
             <img src="assets/gear.svg" alt="gearIcon" class="gearIcon">
-	        </td>
-	        <td align="right">
-	        <div id="dtselected"></div>
+            <div id="dtselected"></div>
 	        </td>
 	      </tr>
+        <tr>
+          <td class="navButtons">
+            <input type="button" value="<< Week" onClick="divw(calendar('u'),'lc');">
+            <input type="button" value="Today" onClick="divw(calendar(),'lc');">
+            <input type="button" value="Week >>" onClick="divw(calendar('d'),'lc');"><br><br>
+            <input type="button" value="<< Month" onClick="divw(calendar('lm'),'lc');">
+	          <input type="button" value="Month >>" onClick="divw(calendar('nm'),'lc');">
+          </td>
+        </tr>
 	    </table>
 	    <div class="sl">
 	    <script language="Javascript">
