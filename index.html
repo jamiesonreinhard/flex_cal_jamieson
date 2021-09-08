@@ -2,7 +2,9 @@
 <head>
 <title>Calendar</title>
 <link type="text/css" rel="stylesheet" href="calendar.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript" language="javascript" src="calendar.js"></script>
+<script type="text/javascript" language="javascript" src="listeners.js"></script>
 </head>
 <body onLoad="init();">
 <table border=0 cellpadding=3 cellspacing=0 width="100%" height="100%">
@@ -36,7 +38,8 @@
   <tr>
     <td class="botrow" height=1>
     <form name="rowform" onSubmit="return false;">
-    Number of Rows: <input type="text" name="rowsize" size=1 maxlength=2 value=6 onChange="numrows=this.value;divw(calendar('rf'),'lc');">
+    Number of Rows: <input type="range" name="rowsize" size=1 min=2 max=6 value=6 onChange="numrows=this.value;divw(calendar('rf'),'lc');">
+    Color Picker: <input type="color" id="colorpicker" value="#9DBD9D">
     </form>
     </td>
     <td class="botrow" align="right">
